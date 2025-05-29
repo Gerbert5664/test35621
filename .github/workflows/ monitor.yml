@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
+
 jobs:
   monitor-balance:
     runs-on: ubuntu-latest
@@ -11,5 +12,7 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-    - run: pip install requests
-    - run: python monitor.py
+    - name: Install dependencies
+      run: pip install requests
+    - name: Run monitor script
+      run: python monitor.py
