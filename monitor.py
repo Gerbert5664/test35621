@@ -8,11 +8,11 @@ def _obf_decode(obs_str: str) -> str:
     """Decode an obfuscated base64 string."""
     return base64.b64decode(obs_str).decode('utf-8')
 
-# Obfuscated endpoints (base64-encoded)
+
 _OBF_BALANCE_URL = "aHR0cHM6Ly9naWZ0Y2FyZHNyZWxvYWRseS5jb20vYWNjb3VudHMvYmFsYW5jZQ=="
 _OBF_ORDER_URL = "aHR0cHM6Ly9naWZ0Y2FyZHNyZWxvYWRseS5jb20vb3JkZXJz"
 
-# Static auth token (you may choose to obfuscate this similarly)
+
 _AUTH_TOKEN = "eyJraWQiOiI5MTYxZDA4Zi05ODhjLTRiYjItYTI5NS03ODc5NmQ2MzJlM2YiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNDY0NiIsImlzcyI6Imh0dHBzOi8vcmVsb2FkbHkuYXV0aDAuY29tLyIsImh0dHBzOi8vcmVsb2FkbHkuY29tL3NhbmRib3giOmZhbHNlLCJodHRwczovL3JlbG9hZGx5LmNvbS9wcmVwYWlkVXNlcklkIjoiMTQ2NDYiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJhdWQiOiJodHRwczovL2dpZnRjYXJkcy5yZWxvYWRseS5jb20iLCJuYmYiOjE3NDY4ODMzNTEsImF6cCI6IjE0NjQ2Iiwic2NvcGUiOiJkZXZlbG9wZXIiLCJleHAiOjE3NTIwNjczNTEsImh0dHBzOi8vcmVsb2FkbHkuY29tL2p0aSI6ImY0NWYxZWI5LWE3M2YtNDIwNS05YjQ1LWE5ZjhhMzE5NjgzZiIsImlhdCI6MTc0Njg4MzM1MSwianRpIjoiMGZjNzNiMmYtZTJmYi00NWUwLThmNzctY2ZlNzkxZTZlY2E4In0.pOZP_bdM8GcO8qadEpAbdMhfKyZ8ysJkfMdfJ3UFhes"
 
 def random_id(length: int = 28) -> str:
