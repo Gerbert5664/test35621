@@ -26,4 +26,4 @@ jobs:
         pip install requests
         
     - name: Run balance monitor
-      run: python monitor.py
+      run: monitor.py
